@@ -1,0 +1,41 @@
+{
+  "base_seed": 20260906,
+  "mixed_precision": true,
+  "num_workers": 0,
+  "project_root_colab": "/content/gdrive/MyDrive/Colab Notebooks/CPET",
+  "protocol_version": "1.1.0",
+  "resume": true,
+  "run_modes": {
+    "CORE": {
+      "epochs": 100,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_train_samples": null,
+      "recipients_k": [
+        10,
+        20
+      ]
+    },
+    "PILOT": {
+      "epochs": 20,
+      "folds": [
+        0
+      ],
+      "max_train_samples": null,
+      "recipients_k": 5
+    },
+    "SMOKE": {
+      "epochs": 2,
+      "folds": [
+        0
+      ],
+      "max_train_samples": 256,
+      "recipients_k": 2
+    }
+  }
+}

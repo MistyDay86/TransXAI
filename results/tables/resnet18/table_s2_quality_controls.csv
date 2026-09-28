@@ -1,0 +1,6 @@
+check,value,required,status
+Analysis cells,180,180,PASS
+Positive cell means,180,180,PASS
+Cell CIs entirely positive,180,180,PASS
+Exact-k violations,0,0,PASS
+Local faithfulness violations,0,0,PASS

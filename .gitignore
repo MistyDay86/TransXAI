@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+*.so
+.DS_Store
+.idea/
+.vscode/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Raw, derived, and sensitive study artifacts
+data/
+checkpoints/
+cache/
+staging/
+runs/
+results/**/*.parquet
+results/**/*.h5
+results/**/*.hdf5
+results/**/*.npz
+results/**/*predictions*
+results/**/*donor_metrics*
+*.pt
+*.pth
+*.ckpt
+
+# Notebook and Colab transient files
+.ipynb_checkpoints/
+*.tmp
+*.tmp.*

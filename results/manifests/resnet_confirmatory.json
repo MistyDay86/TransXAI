@@ -1,0 +1,79 @@
+{
+  "analysis": {
+    "bootstrap_replicates": 10000,
+    "cluster_unit": {
+      "isic2016": "case/lesion",
+      "pad_ufes20": "patient",
+      "siim_acr": "case/lesion"
+    },
+    "estimand": "equal-weight mean across dataset-fold-explainer cells",
+    "multiplicity": "Holm across 3 dataset and 6 explainer secondary tests at 10%",
+    "permutation_replicates": 100000,
+    "primary_budget": 0.1,
+    "robustness_budget": 0.2,
+    "seed": 20260906
+  },
+  "artifacts": {
+    "figure_captions.txt": "d862058f3fc2411d9061f0a71f0843d5975d5001b1e606d5de0ff04ad02e57f7",
+    "figures/fig_1_explainer_forest.pdf": "6b8fb2223f1fbbfd92147d8a401ed55291f305c08d767580a6b921122d9ddf56",
+    "figures/fig_1_explainer_forest.png": "99439cca86f7c81239856ec58800fc3c353de92330aa5b5d21ec04f14045fdd2",
+    "figures/fig_2_dataset_cpts.pdf": "8f8e7fd2dfb4344e04631385500e96ad22bdaced54927ba35091ab338bb09ef2",
+    "figures/fig_2_dataset_cpts.png": "250ead8f24a50e1bf373abd31e03ac81eb777af638c2082693d48fb307b4b2a8",
+    "figures/fig_3_gain_heatmap.pdf": "9a0ca983569b4c3e35f57016ba1c0516f9d9ca02035be2f71fb581bb787421f0",
+    "figures/fig_3_gain_heatmap.png": "cfc5ed8152f879f09047f7a73fa6d80ef3a269cd5be78cecba8ed42690f0e0dd",
+    "figures/fig_4_budget_robustness.pdf": "4f96e8fe87d82c593ede8117d957395cc3426db229a0427117848aaa695b0a65",
+    "figures/fig_4_budget_robustness.png": "8430bd3c6fbdc69321cd8f17e61fb81cb9fb5e1486225e4d4fe98cede4052df6",
+    "figures/fig_5_cluster_ecdf.pdf": "d786fed4501eea299f3a9d5169c2872d1b38b29f000ad6400abd1f46f1f09680",
+    "figures/fig_5_cluster_ecdf.png": "249663a2102d8578ac5600ce6ad615b691f0efee64b4482bcfe3b76242a3ab44",
+    "figures/fig_6_qualitative_transport.pdf": "86d5f54c967d666a391e90d1564682363cecc36088bb053cd05d47f89ab66f90",
+    "figures/fig_6_qualitative_transport.png": "a6a61477db5a7db88d4a81284c7ee9ffd858453d39459eabab775abe7155a003",
+    "paper_results_paragraph.txt": "58f46add2905ff347956544d8c990e2c85b2daf00316c5a4f9471c26cf45d2c0",
+    "supplement/analysis_donor_metrics_corrected.parquet": "b3814335ad44bb5217416264d41e721c7b16847cdf0a92f6aa715bbbed7fb577",
+    "supplement/hierarchical_bootstrap_distributions.npz": "f8f757704c529702642b1724de445fdcbbad3b11e9881268a1dcba4873205bf8",
+    "supplement/pad_q_patient_disjoint_correction.csv": "d167b7f5c2b90d8ff65d6ce89424aea1930e4a43c2603c26d0e31e91f4f293d2",
+    "supplement/qualitative_pair_metrics.csv": "eee8f3952db818ae4fe2a568d9980b3a0c3108aa0d02877c8f79b7f412dd0666",
+    "supplement/qualitative_selection_audit.csv": "aeabdca65830e1a043dd83d925e4c93daad0791b0d518f519e6a804d8357320f",
+    "tables/table_1_overall_confirmatory.csv": "1540900d15f5ce01ccac688cab7c95241088092658b18c5dea58bfd2c4bf03fc",
+    "tables/table_1_overall_confirmatory.tex": "0947906baec6c41663d2a5e6c99ca5df34b6f927bfecbe5dedc8dca6376f92ae",
+    "tables/table_2_by_dataset.csv": "ac78949327c8923e41e5e8c5fc16668d00b8e602166f81490e5eb61dafcba6d1",
+    "tables/table_2_by_dataset.tex": "6fe266e1329f53199b499bc4f3b887065c4ec9c52e0eb31973b47d8fbd3ff782",
+    "tables/table_3_by_explainer.csv": "92994ecddad658de7f7caa4846b64fa0145c8fdbf45efc8399992d2290d43d9c",
+    "tables/table_3_by_explainer.tex": "d337a1a202766748f428a194a41e8993f6b1f7a55cfc88326917faedb67637ef",
+    "tables/table_4_inferential_tests.csv": "47556a78df2ecaf2d945615e66fd765b9ce1dcba82b46af6b199af00a62c6516",
+    "tables/table_s1_all_180_cells.csv": "b8c28589dc47eb990e4bd521e0803da209afcad0ddf2f0859f84aee4a22b8c9f",
+    "tables/table_s2_quality_controls.csv": "37f6c1a5126858d9fd2a0d889d9f08ba45ef778dc19a5e7fa6c6918587b7adca"
+  },
+  "created_utc": "2026-09-10T01:15:04.828381+00:00",
+  "inputs": {
+    "donor_metrics": "/content/gdrive/MyDrive/Colab Notebooks/CPET/runs/transport_refinement/resnet18/20260909_235854/t_cpt_donor_metrics.parquet",
+    "donor_metrics_sha256": "742ad472c9fc88097af5e7f1936f173699eb38b1b4fb721614340311e3046440",
+    "nb06b_manifest": "/content/gdrive/MyDrive/Colab Notebooks/CPET/runs/transport_refinement/resnet18/latest_transport_refinement_manifest.json",
+    "nb06b_manifest_sha256": "bcd0bc7f94e1856f8ebe825d7664c1f9e569e0512c412d4d7731d8d711799eed"
+  },
+  "notebook": "07_confirmatory_statistics_and_paper_figures.py",
+  "results": {
+    "budget_difference": 0.004433575624819525,
+    "budget_difference_ci95": [
+      0.0014529028907418252,
+      0.007382497936487196
+    ],
+    "budget_difference_p_two_sided": 0.003869961300386996,
+    "claim_status": "SUPPORTED",
+    "positive_cells": 180,
+    "primary_ci95": [
+      0.12138029504567385,
+      0.12854193858802318
+    ],
+    "primary_delta": 0.12497255129393395,
+    "primary_p_one_sided": 9.99990000099999e-06,
+    "robustness_ci95": [
+      0.12543353587388992,
+      0.13342086896300315
+    ],
+    "robustness_delta": 0.12940612691875347,
+    "robustness_p_one_sided": 9.99990000099999e-06,
+    "strict_positive_cell_ci": 180
+  },
+  "runtime_seconds": 2211.9960038661957,
+  "status": "PASS"
+}

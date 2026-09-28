@@ -1,0 +1,77 @@
+{
+  "all_folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "augmentations": "modality_specific_conservative",
+  "backbone": "regnet_x_400mf",
+  "backbone_lr": 0.0001,
+  "calibration": "validation_temperature_scaling",
+  "checkpoint_every": 2,
+  "dataset_seed_offset": {
+    "isic2016": 200,
+    "pad_ufes20": 300,
+    "siim_acr": 100
+  },
+  "dataset_settings": {
+    "isic2016": {
+      "batch_size": 48,
+      "input_size": 320,
+      "modality": "dermoscopy",
+      "scope": "case_proxy"
+    },
+    "pad_ufes20": {
+      "batch_size": 48,
+      "input_size": 320,
+      "modality": "clinical",
+      "scope": "patient"
+    },
+    "siim_acr": {
+      "batch_size": 48,
+      "input_size": 320,
+      "modality": "xray",
+      "scope": "case_proxy"
+    }
+  },
+  "datasets": [
+    "siim_acr",
+    "isic2016",
+    "pad_ufes20"
+  ],
+  "early_stop_patience": 12,
+  "grad_clip": 5.0,
+  "head_lr": 0.0005,
+  "loss": "BCEWithLogitsLoss_train_fold_pos_weight",
+  "max_epochs": 100,
+  "min_epochs": 12,
+  "mixed_precision": "fp16",
+  "num_workers": 0,
+  "optimizer": "AdamW",
+  "paper_role": "second_backbone_architectural_robustness",
+  "pretraining": "ImageNet1K_V2",
+  "protocol_version": "1.1.0",
+  "quality_gate": {
+    "mean_auroc": 0.7,
+    "min_fold_auroc": 0.6
+  },
+  "scheduler": "linear_warmup_then_cosine",
+  "selection_metric": "validation_AUROC",
+  "threshold": "validation_Youden_J",
+  "warmup_epochs": 3,
+  "weight_decay": 0.0001,
+  "xai_layer_spec": {
+    "intervention_spatial_at_320": [
+      20,
+      20
+    ],
+    "intervention_stage": "trunk_output.block3",
+    "matching_spatial_at_320": [
+      40,
+      40
+    ],
+    "matching_stage": "trunk_output.block2"
+  }
+}

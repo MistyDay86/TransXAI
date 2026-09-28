@@ -1,0 +1,89 @@
+{
+  "ablation_explainers": [
+    "gradcam",
+    "integrated_gradients",
+    "rise"
+  ],
+  "ablations": [
+    "random_search",
+    "no_cvar",
+    "no_validation",
+    "no_trust_region"
+  ],
+  "clinical_masks_role": "post-hoc evaluation only; never optimization, matching, or selection",
+  "control_donors_per_fold": 16,
+  "control_folds": [
+    0
+  ],
+  "datasets": [
+    "siim_acr",
+    "isic2016",
+    "pad_ufes20"
+  ],
+  "explainers": [
+    "gradcam",
+    "layercam",
+    "integrated_gradients",
+    "lrp",
+    "rise",
+    "extremal_perturbation"
+  ],
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hdf5_reader": "exact Notebook 06B dataset scoring, including +2 spatial-map preference",
+  "independent_metrics": [
+    "pixel_transport_consistency",
+    "pixel_deletion_faithfulness",
+    "pixel_sufficiency",
+    "clinical_dice",
+    "clinical_iou",
+    "clinical_roi_hit"
+  ],
+  "inference": {
+    "bootstrap_replicates": 5000,
+    "permutation_replicates": 50000
+  },
+  "localization_noninferiority_margin": 0.02,
+  "matching_policies": [
+    "nearest_same_decision",
+    "random_same_decision",
+    "nearest_opposite_decision"
+  ],
+  "name": "CPET compact reviewer-facing validation and controls",
+  "numerical_replay_reporting_references_nonblocking": {
+    "cell_mean": 0.002,
+    "maximum_absolute": 0.05,
+    "mean_absolute": 0.005
+  },
+  "optimizer": {
+    "calibration_a_candidates": 384,
+    "calibration_b_candidates": 256,
+    "cpts_epsilon": 0.05,
+    "cvar_alpha": 0.8,
+    "gradient_alternatives": 3,
+    "lambda_cvar": 0.35,
+    "lambda_tv": 0.002,
+    "local_effect_tolerance": 0.1,
+    "max_iterations": 15,
+    "max_swap_fraction": 0.25,
+    "n_recipient_a": 12,
+    "n_recipient_b": 12,
+    "n_recipient_q": 10,
+    "swap_batches": [
+      1,
+      2,
+      4
+    ],
+    "validation_accept_margin": 0.002
+  },
+  "preprocessing_selection": "fold-wise minimum mean absolute replay error over three frozen candidates",
+  "primary_budget": 0.1,
+  "scope": "full frozen-grid audit plus targeted mechanistic controls",
+  "seed": 20260906,
+  "version": "compact-1.0.2"
+}

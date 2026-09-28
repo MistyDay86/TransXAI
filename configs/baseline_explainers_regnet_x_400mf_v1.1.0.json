@@ -1,0 +1,76 @@
+{
+  "area_budgets_deferred": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "backbone": "regnet_x_400mf",
+  "classifier_artifact_chain_sha256": "0637b2db034e54e1fdbdae28351f517029d3826192216b62f030622c47b39603",
+  "cohort": {
+    "max_donors_per_fold": 128,
+    "max_images_per_effective_group": 4,
+    "reference_path": "/content/gdrive/MyDrive/Colab Notebooks/CPET/results/explanations/resnet18/explanation_cohort.parquet",
+    "reference_sha256": "ca6270ac08825d19f032b798b0b4ad91d4118aeef7475676a2ba6d4b0fbe0a1a",
+    "selection": "exact sample_id replay of the frozen ResNet-18 donor cohort; RegNet OOF predictions and target signs"
+  },
+  "datasets": [
+    "siim_acr",
+    "isic2016",
+    "pad_ufes20"
+  ],
+  "explainers": [
+    "gradcam",
+    "layercam",
+    "integrated_gradients",
+    "lrp",
+    "rise",
+    "extremal_perturbation"
+  ],
+  "extremal_perturbation": {
+    "area_weight": 12.0,
+    "baseline": "Gaussian-blurred input",
+    "grid": 16,
+    "optimization_area": 0.1,
+    "steps": 40,
+    "tv_weight": 0.15
+  },
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "gradcam_layer": "regnet_x_400mf.trunk_output.block4",
+  "integrated_gradients": {
+    "baseline": "Gaussian-blurred input",
+    "method": "gausslegendre",
+    "steps": 32
+  },
+  "io": {
+    "preload_decode_workers": 8,
+    "preprocess_once_per_fold_in_ram": true,
+    "stage_copy_workers": 8,
+    "stage_root": "/content/cpet_stage"
+  },
+  "layercam_layer": "regnet_x_400mf.trunk_output.block4",
+  "lrp": {
+    "channel_reduction": "signed sum then positive evidence",
+    "implementation": "Captum LRP"
+  },
+  "map_semantics": "positive evidence for the explained decision",
+  "normalization": "ReLU then per-map maximum scaling to [0,1]; degenerate maps retained and flagged",
+  "notebook_id": "04R_baseline_explainers_regnet_x_400mf",
+  "num_workers": 0,
+  "protocol_version": "1.1.0",
+  "resume": true,
+  "rise": {
+    "baseline": "Gaussian-blurred input",
+    "grid": 8,
+    "masks": 512,
+    "p_keep": 0.5
+  },
+  "seed": 20260906,
+  "storage": "float16 continuous saliency in HDF5; thresholding deferred",
+  "target": "OOF predicted decision; signed binary logit (+logit for predicted positive, -logit for predicted negative)"
+}

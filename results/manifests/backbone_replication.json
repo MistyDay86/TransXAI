@@ -1,0 +1,121 @@
+{
+  "analysis": {
+    "backbones": [
+      "resnet18",
+      "regnet_x_400mf"
+    ],
+    "bootstrap_replicates": 10000,
+    "budgets": [
+      0.1,
+      0.2
+    ],
+    "cluster_unit": {
+      "isic2016": "case/lesion",
+      "pad_ufes20": "patient",
+      "siim_acr": "case/lesion"
+    },
+    "datasets": [
+      "siim_acr",
+      "isic2016",
+      "pad_ufes20"
+    ],
+    "explainers": [
+      "gradcam",
+      "layercam",
+      "integrated_gradients",
+      "lrp",
+      "rise",
+      "extremal_perturbation"
+    ],
+    "folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "permutation_replicates": 100000,
+    "primary_estimand": "RegNet-X-400MF equal-cell mean delta_CPTS at exact 10%",
+    "seed": 20260906
+  },
+  "artifact_chain_sha256": "7f24f2e6271e11a8e0e96a76c4effca8329fd289f4fdf97b711b6d882cb9df88",
+  "artifacts": {
+    "figure_captions_backbone_replication.txt": "e96f56394c189e697a1a711519fcf523b614113b295184af4c2e4388ddd1c816",
+    "figures/fig_1_backbone_explainer_forest.pdf": "5f642d38e95e858c016ab16bfb6228b2b7b5dea084aa9692e2e1191fb9044196",
+    "figures/fig_1_backbone_explainer_forest.png": "ce8edd95722738fb4c70b810d1c1dd560448cd0b8850f8a0394eb2ce5f83a7db",
+    "figures/fig_2_backbone_dataset_forest.pdf": "50b99ff8148190dcd37d6178e8cc05cb23fd6c4e53b3dadd771569f0f01a921e",
+    "figures/fig_2_backbone_dataset_forest.png": "8ee474ce2419a5561f49cd54e807f4cbca60ca3a29ea7bff6e6c26da8b17c3bc",
+    "figures/fig_3_backbone_budget_robustness.pdf": "ec52c4bed794da06120aaaca231a14c93efbfbd5456a9a38e0f92fe737635e98",
+    "figures/fig_3_backbone_budget_robustness.png": "75c4746cf96d4a78ea1550c42a3d833d3d82edf23350966d6a076d7622875553",
+    "figures/fig_4_regnet_gain_heatmaps.pdf": "59046679a2dd1f57f05cee4dd6a27c37b52dffde0d686be2374b9574e3487631",
+    "figures/fig_4_regnet_gain_heatmaps.png": "b11e21602306321e06b01b585768537c5a90113877ea4423bd601b8c3f558e2b",
+    "figures/fig_5_paired_backbone_cells.pdf": "337ae74c98b18609f241cc2d75bdd4cd08fb85dd2d4afabbb7a0a9162bcdb25f",
+    "figures/fig_5_paired_backbone_cells.png": "44fd8ce8c1e0a87a910689809e9c5a5443f856ed3a06f0e40011917dd6db2aef",
+    "paper_results_backbone_replication.txt": "85ffdd256ed06ded5748ea3d73b169a7fcb21e4b658d1568493e3f8250c571d8",
+    "supplement/paired_backbone_bootstrap_distributions.npz": "58d6a18704daf157e73258974079c6a30e56a6c2aeae1a1caf708fdbd3a4bd51",
+    "supplement/paired_donor_metrics_2backbones_2budgets.parquet": "e10f057febf364177b1b86379b86c8aebf7abc7aa378e891472510ffc6aef42d",
+    "tables/table_1_backbone_budget_overall.csv": "62b3f52c939d5235084e521c0d423e99f93a6240963bdefe31443cfaca646073",
+    "tables/table_1_backbone_budget_overall.tex": "9661f1c11cb445094a89af6f6d724c464ef25730c7824e5597f4bcbf5a35c115",
+    "tables/table_2_backbone_by_dataset.csv": "d07b163e6ec5056f71a016b09280432ac3717245ddf1de715a18e8974fe74703",
+    "tables/table_2_backbone_by_dataset.tex": "a576f6aac7f1adecd90aef98de9185133ab70546338217ee5cdcd223ae4e672b",
+    "tables/table_3_backbone_by_explainer.csv": "d216226083c497cd1f0203e971912ff5da76552a4523003eb1fa52ee97268034",
+    "tables/table_3_backbone_by_explainer.tex": "da87dc3aa44a2c1fafaa2753374e7ffd882a3952e1d7bad9f10c4f55bcf88612",
+    "tables/table_4_backbone_budget_contrasts.csv": "9122f67de891005ce04d33b0403fbed3d82aff877a6d7d070be46cc61955597e",
+    "tables/table_5_inferential_tests.csv": "f7033b18cb2abd2352e8f49f9f92790e4ded4b956b86d6adbc09feb848bf371b",
+    "tables/table_s1_all_360_cells.csv": "313f51f2fcefbfa985d93a923fbbc2458161120b8966a4b5655f02a5874ca224",
+    "tables/table_s2_quality_controls.csv": "1a20b887164ab4180f0217e623c1143df3a305d4e6587e6696bcae731181dacb"
+  },
+  "created_utc": "2026-09-12T08:52:52.705197+00:00",
+  "inputs": {
+    "paths": {
+      "regnet_oof_cohort": "/content/gdrive/MyDrive/Colab Notebooks/CPET/results/explanations/regnet_x_400mf/explanation_cohort.parquet",
+      "regnet_p10_manifest": "/content/gdrive/MyDrive/Colab Notebooks/CPET/runs/transport_refinement/regnet_x_400mf/20260912_002651/transport_refinement_manifest.json",
+      "regnet_p20_manifest": "/content/gdrive/MyDrive/Colab Notebooks/CPET/runs/transport_refinement/regnet_x_400mf/20260912_075600/transport_refinement_manifest.json",
+      "resnet07_manifest": "/content/gdrive/MyDrive/Colab Notebooks/CPET/runs/confirmatory/resnet18/20260910_003834/confirmatory_manifest.json",
+      "resnet_corrected_metrics": "/content/gdrive/MyDrive/Colab Notebooks/CPET/runs/confirmatory/resnet18/20260910_003834/supplement/analysis_donor_metrics_corrected.parquet"
+    },
+    "sha256": {
+      "regnet_oof_cohort": "907fe1953b59e1a6ee4ad722f963f2d7700800e54ee450a58283a10685930e40",
+      "regnet_p10_manifest": "ed74533d9927634e408b50feff9fa249150294fde49cfbcc732c2d5003353b76",
+      "regnet_p10_metrics": "fead8bb4829ca750db001e832b96566eaf66df078fcdd6cf0628831e1b36aec4",
+      "regnet_p20_manifest": "e5d0d10b878fea20a1919311ee6c951b4a095c26c9ccf94868fa731652f8ec7e",
+      "regnet_p20_metrics": "a3bdf82c97b56e4df37df53413a9349d20e2f1546e26c81386f86a1399fe8b3e",
+      "resnet07_latest": "f790d05587258d0fcf4cbf3830dd5a6883e44a762004412fdea20358d065976f",
+      "resnet_corrected_metrics": "b3814335ad44bb5217416264d41e721c7b16847cdf0a92f6aa715bbbed7fb577"
+    }
+  },
+  "notebook": "07R_backbone_replication_statistics.py",
+  "results": {
+    "architectural_replication": "SUPPORTED",
+    "budget_20_robustness": "SUPPORTED",
+    "exact_k_violations": 0,
+    "faithfulness_violations": 0,
+    "regnet_budget_difference": 0.004086681641638279,
+    "regnet_budget_difference_ci95": [
+      0.0008492901921272278,
+      0.007281790487468241
+    ],
+    "regnet_minus_resnet_primary": -0.013238837011158466,
+    "regnet_minus_resnet_primary_ci95": [
+      -0.017788850329816343,
+      -0.008640665002167225
+    ],
+    "regnet_primary_ci95": [
+      0.10854271091520787,
+      0.11481103170663118
+    ],
+    "regnet_primary_delta": 0.11170915514230728,
+    "regnet_primary_p_one_sided": 9.99990000099999e-06,
+    "regnet_primary_positive_cells": 90,
+    "regnet_robustness_ci95": [
+      0.11225932762026787,
+      0.11931619588285684
+    ],
+    "regnet_robustness_delta": 0.11579583585262299,
+    "regnet_robustness_p_one_sided": 9.99990000099999e-06,
+    "regnet_robustness_positive_cells": 90,
+    "resnet_primary_delta": 0.12494799494743347
+  },
+  "runtime_seconds": 17.178022861480713,
+  "status": "PASS"
+}

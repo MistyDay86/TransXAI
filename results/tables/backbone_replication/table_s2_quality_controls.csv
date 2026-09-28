@@ -1,0 +1,7 @@
+check,value,required,status
+Paired donor rows,46080,46080,PASS
+Analysis cells,360,360,PASS
+Positive cell means,360,360,PASS
+RegNet primary positive cells,90,90,PASS
+Exact-k violations,0,0,PASS
+Local-faithfulness violations,0,0,PASS

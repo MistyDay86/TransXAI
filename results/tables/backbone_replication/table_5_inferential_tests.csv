@@ -1,0 +1,19 @@
+contrast,estimate,alternative,family,p_value,holm_p_value
+RegNet gain — 10%,0.11167720005366422,greater,primary,9.99990000099999e-06,
+RegNet gain — 20%,0.11575481184536669,greater,robustness,9.99990000099999e-06,
+ResNet gain — 10%,0.12497255129393395,greater,context,9.99990000099999e-06,
+ResNet gain — 20%,0.12940612691875347,greater,context,9.99990000099999e-06,
+Backbone difference — RegNet minus ResNet — 10%,-0.013295351240269749,two-sided,architecture/budget secondary,9.99990000099999e-06,4.9999500004999955e-05
+Backbone difference — RegNet minus ResNet — 20%,-0.013651315073386782,two-sided,architecture/budget secondary,9.99990000099999e-06,4.9999500004999955e-05
+RegNet budget difference — 20% minus 10%,0.0040776117917024615,two-sided,architecture/budget secondary,0.018329816701832983,0.036659633403665966
+ResNet budget difference — 20% minus 10%,0.004433575624819498,two-sided,architecture/budget secondary,0.0035999640003599965,0.010799892001079989
+Backbone × budget interaction,-0.0003559638331170359,two-sided,architecture/budget secondary,0.8759612403875962,0.8759612403875962
+RegNet dataset — siim_acr — 10%,0.12327118680978064,greater,RegNet subgroup secondary,9.99990000099999e-06,8.999910000899992e-05
+RegNet dataset — isic2016 — 10%,0.1030185886207453,greater,RegNet subgroup secondary,9.99990000099999e-06,8.999910000899992e-05
+RegNet dataset — pad_ufes20 — 10%,0.10874182473046674,greater,RegNet subgroup secondary,9.99990000099999e-06,8.999910000899992e-05
+RegNet explainer — gradcam — 10%,0.08436714724876894,greater,RegNet subgroup secondary,9.99990000099999e-06,8.999910000899992e-05
+RegNet explainer — layercam — 10%,0.08917718646447882,greater,RegNet subgroup secondary,9.99990000099999e-06,8.999910000899992e-05
+RegNet explainer — integrated_gradients — 10%,0.1272514425593319,greater,RegNet subgroup secondary,9.99990000099999e-06,8.999910000899992e-05
+RegNet explainer — lrp — 10%,0.11912689040178481,greater,RegNet subgroup secondary,9.99990000099999e-06,8.999910000899992e-05
+RegNet explainer — rise — 10%,0.11008927320959859,greater,RegNet subgroup secondary,9.99990000099999e-06,8.999910000899992e-05
+RegNet explainer — extremal_perturbation — 10%,0.14005126043802224,greater,RegNet subgroup secondary,9.99990000099999e-06,8.999910000899992e-05

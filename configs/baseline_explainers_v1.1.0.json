@@ -1,0 +1,69 @@
+{
+  "area_budgets_deferred": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "backbone": "resnet18",
+  "bus_uclm_policy": "EXPLORATORY_ONLY",
+  "cohort": {
+    "max_donors_per_fold": 128,
+    "max_images_per_effective_group": 4,
+    "selection": "deterministic label-stratified OOF donor cohort; no XAI metric used"
+  },
+  "datasets": [
+    "bus_uclm",
+    "siim_acr",
+    "isic2016",
+    "pad_ufes20"
+  ],
+  "explainers": [
+    "gradcam",
+    "layercam",
+    "integrated_gradients",
+    "lrp",
+    "rise",
+    "extremal_perturbation"
+  ],
+  "extremal_perturbation": {
+    "area_weight": 12.0,
+    "baseline": "Gaussian-blurred input",
+    "grid": 16,
+    "optimization_area": 0.1,
+    "steps": 40,
+    "tv_weight": 0.15
+  },
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "gradcam_layer": "resnet18.layer4[-1]",
+  "integrated_gradients": {
+    "baseline": "Gaussian-blurred input",
+    "method": "gausslegendre",
+    "steps": 32
+  },
+  "layercam_layer": "resnet18.layer4[-1]",
+  "lrp": {
+    "channel_reduction": "signed sum then positive evidence",
+    "implementation": "Captum LRP"
+  },
+  "map_semantics": "positive evidence for the explained decision",
+  "normalization": "ReLU then per-map maximum scaling to [0,1]; degenerate maps retained and flagged",
+  "notebook_id": "04_baseline_explainers",
+  "num_workers": 0,
+  "protocol_version": "1.1.0",
+  "resume": true,
+  "rise": {
+    "baseline": "Gaussian-blurred input",
+    "grid": 8,
+    "masks": 512,
+    "p_keep": 0.5
+  },
+  "seed": 20260906,
+  "storage": "float16 continuous saliency in HDF5; thresholding deferred",
+  "target": "OOF predicted decision; signed binary logit (+logit for predicted positive, -logit for predicted negative)"
+}

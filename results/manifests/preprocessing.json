@@ -1,0 +1,127 @@
+{
+  "artifact_chain_sha256": "b70c2f673ea0e67be67817208b8ff5ca7ca3e71616aa8bd10fe37ef580ee7de6",
+  "artifact_hashes": {
+    "configs/amendments/CPET-A02_pad_distribution_repair.json": "35a5e4519ff96fe87a774e10949278a3e5436e83befcfbd70d0317ef94d3575d",
+    "configs/datasets.json": "be3428f97acfffe6456006cc167f87a89a961aa6d0181cb9b66afd2400a6889a",
+    "configs/protocol.json": "807e080542c600f68b1691bb402f9541041b87978a3820e34f41a46324385e27",
+    "data/manifests/pad_ufes20_manifest_v1.1.0.csv": "77ad0c5a1be32f96c240d3663e4a75a8f0717bbd80659471b675d10d078f0a18",
+    "data/manifests/pad_ufes20_manifest_v1.1.0.parquet": "498d0498313663ef81834e7996db8a1f84e88538ca773eb916cc8e7e68762873",
+    "data/splits/all_datasets_splits_v1.1.0.csv": "7f177c3c56de48435146d0e95bdf2b92d150633809effc76d0d932e130faa5ad",
+    "data/splits/all_datasets_splits_v1.1.0.parquet": "719d3c63245c46604158a921176f409cea85b0fb9164ec2c142e5a41ebf4b290"
+  },
+  "base_seed": 20260906,
+  "completed_utc": "2026-09-07T00:46:11.407817+00:00",
+  "dataset_reports": {
+    "bus_uclm": {
+      "dataset": "bus_uclm",
+      "duplicate_links": 25,
+      "eligible_samples": 260,
+      "excluded_invalid_or_conflicting": 4,
+      "fold_positive_rates": [
+        0.425531914893617,
+        0.3392857142857143,
+        0.3380281690140845,
+        0.34782608695652173,
+        0.275
+      ],
+      "fold_sizes": [
+        47,
+        56,
+        71,
+        46,
+        40
+      ],
+      "groups": 34,
+      "positive_rate": 0.34615384615384615,
+      "split_seed": 20260966
+    },
+    "isic2016": {
+      "dataset": "isic2016",
+      "duplicate_links": 9,
+      "eligible_samples": 898,
+      "excluded_invalid_or_conflicting": 2,
+      "fold_positive_rates": [
+        0.19101123595505617,
+        0.1864406779661017,
+        0.18579234972677597,
+        0.18994413407821228,
+        0.20441988950276244
+      ],
+      "fold_sizes": [
+        178,
+        177,
+        183,
+        179,
+        181
+      ],
+      "groups": 890,
+      "positive_rate": 0.1915367483296214,
+      "split_seed": 20260937
+    },
+    "pad_ufes20": {
+      "dataset": "pad_ufes20",
+      "duplicate_links": 20,
+      "eligible_samples": 2284,
+      "excluded_duplicate_label_conflicts": 14,
+      "fold_positive_rates": [
+        0.4692144373673036,
+        0.4666666666666667,
+        0.4879120879120879,
+        0.4682203389830508,
+        0.47639484978540775
+      ],
+      "fold_sizes": [
+        471,
+        420,
+        455,
+        472,
+        466
+      ],
+      "groups": 1369,
+      "inference_scope": "patient",
+      "lesions": 1637,
+      "original_patients": 1373,
+      "positive_rate": 0.47373029772329245,
+      "split_seed": 20260934
+    },
+    "siim_acr": {
+      "dataset": "siim_acr",
+      "duplicate_links": 412,
+      "eligible_samples": 11840,
+      "excluded_invalid_or_conflicting": 207,
+      "fold_positive_rates": [
+        0.21588508660752007,
+        0.2195945945945946,
+        0.21663851351351351,
+        0.2196776929601357,
+        0.2198402690205969
+      ],
+      "fold_sizes": [
+        2367,
+        2368,
+        2368,
+        2358,
+        2379
+      ],
+      "groups": 11558,
+      "positive_rate": 0.21832770270270271,
+      "split_seed": 20260943
+    }
+  },
+  "errors": [],
+  "hardware_required": "CPU",
+  "max_source_dataset_gib": 5.0,
+  "notebook_id": "02b_repair_pad_ufes20",
+  "num_workers": 0,
+  "pad_distribution_fingerprint_sha256": "215e6eb9d3629e87e24c6416fa334cbd45e73dd2d16efaa7616a133d1a5802e7",
+  "pad_distribution_version": "1",
+  "previous_status": "PARTIAL",
+  "project_root": "/content/gdrive/MyDrive/Colab Notebooks/CPET",
+  "protocol_version": "1.1.0",
+  "repairs_previous_artifact_chain_sha256": "ce6ef6386fa5333a9640e1ca7594d391c0d3979151dfcd0277bc7590b8e2023d",
+  "status": "PASS",
+  "warnings": [
+    "siim_acr: case-level validation; not counted as patient-level replication.",
+    "isic2016: case-level validation; not counted as patient-level replication."
+  ]
+}

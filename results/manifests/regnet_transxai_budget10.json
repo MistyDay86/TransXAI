@@ -1,0 +1,76 @@
+{
+  "artifact_chain_sha256": "bbc63be16250dfd5017943961a98c9f77c55dec4e801e627cce7e3c92bee3e8d",
+  "artifacts": {
+    "metrics": "/content/gdrive/MyDrive/Colab Notebooks/CPET/runs/transport_refinement/regnet_x_400mf/20260912_002651/t_cpt_donor_metrics.parquet",
+    "protocol": "/content/gdrive/MyDrive/Colab Notebooks/CPET/configs/transport_refinement_t_cpt_v1.0.1.json",
+    "result_root": "/content/gdrive/MyDrive/Colab Notebooks/CPET/results/transport_refinement/regnet_x_400mf/t_cpt_v1.0.1",
+    "summary": "/content/gdrive/MyDrive/Colab Notebooks/CPET/runs/transport_refinement/regnet_x_400mf/20260912_002651/t_cpt_summary.csv"
+  },
+  "backbone": "regnet_x_400mf",
+  "created_utc": "2026-09-12T00:26:51.861818+00:00",
+  "hardware": {
+    "gpu": "Tesla T4",
+    "vram_gib": 14.56317138671875
+  },
+  "implementation": "1.0.1",
+  "jobs": {
+    "created": 78,
+    "errors": [],
+    "expected": 90,
+    "resumed": 12
+  },
+  "method": "T-CPT",
+  "notebook": "06R_transport_refinement_regnet_x_400mf.py",
+  "results": {
+    "claim_signal": "POSITIVE_REPLICATION",
+    "exact_k_violations": 0,
+    "faithfulness_violations": 0,
+    "pooled_ci95": [
+      0.10856911394731751,
+      0.11502217556242059
+    ],
+    "pooled_delta_Q": 0.11181602069388627,
+    "positive_cells": 90,
+    "strict_positive_cells": 90,
+    "total_cells": 90
+  },
+  "run_selection": {
+    "backbone": "regnet_x_400mf",
+    "budgets": [
+      0.1
+    ],
+    "datasets": [
+      "siim_acr",
+      "isic2016",
+      "pad_ufes20"
+    ],
+    "explainers": [
+      "gradcam",
+      "layercam",
+      "integrated_gradients",
+      "lrp",
+      "rise",
+      "extremal_perturbation"
+    ],
+    "folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "is_full_confirmatory_grid": true,
+    "max_donors_per_dataset": null,
+    "n_folds": 5
+  },
+  "runtime_seconds": 15858.114736318588,
+  "sha256": {
+    "metrics": "fead8bb4829ca750db001e832b96566eaf66df078fcdd6cf0628831e1b36aec4",
+    "nb03r": "48bda3d0061fdb8346a030eef5891213c7cb56da373be8e3cd5674400b77c9e5",
+    "nb04r": "9b429f4d5833e134e9e029d86c59ae0c665eb8b07daf0456c5008ec75a42b7d3",
+    "protocol": "4d54fa476838fdddbc8aacfab0be305a654f54fa419325b6d2f2b2df2be05ade",
+    "run_selection": "2ac756b9917693200ea9c4065471597519e50a79aa5dcc0766af32bff8aec727",
+    "summary": "c05392b5c7b5f1452d9fbf9d8aef8a37e75e09386030d11ce16e900e268f5909"
+  },
+  "status": "PASS"
+}

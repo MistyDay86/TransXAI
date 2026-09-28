@@ -1,0 +1,45 @@
+{
+  "bus_uclm": {
+    "expected_images": 683,
+    "group_key": "patient_id",
+    "has_manual_masks": true,
+    "inference_scope": "patient",
+    "input_size": 256,
+    "role": "development_smoke",
+    "source": "MedOtter/BUS-UCLM mirror of DOI 10.17632/7fvgj4jsp7.3",
+    "task": "benign_vs_malignant"
+  },
+  "isic2016": {
+    "expected_images": 900,
+    "group_key": "image_case_id",
+    "has_manual_masks": true,
+    "inference_scope": "case_proxy",
+    "input_size": 320,
+    "role": "masked_replication",
+    "source": "Official ISIC 2016 Task 3B",
+    "task": "malignant_vs_benign"
+  },
+  "pad_ufes20": {
+    "distribution_fingerprint_sha256": "215e6eb9d3629e87e24c6416fa334cbd45e73dd2d16efaa7616a133d1a5802e7",
+    "expected_images": 2298,
+    "geometry_mask_source": "segmenter validated independently; not used as ground truth",
+    "group_key": "patient_id",
+    "has_manual_masks": false,
+    "inference_scope": "patient",
+    "input_size": 320,
+    "role": "external_patient_subgroup",
+    "secondary_group_key": "lesion_id",
+    "source": "Kaggle mahdavi1202/skin-cancer, distribution 1; content-validated mirror of DOI 10.17632/zr7vgbcyr2.1",
+    "task": "skin_cancer_vs_non_cancer"
+  },
+  "siim_acr": {
+    "expected_images": 12047,
+    "group_key": "image_case_id",
+    "has_manual_masks": true,
+    "inference_scope": "case_proxy",
+    "input_size": 320,
+    "role": "primary_large_scale",
+    "source": "Kaggle vbookshelf/pneumothorax-chest-xray-images-and-masks",
+    "task": "pneumothorax_vs_negative"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "artifact_chain_sha256": "21dfc699880ea64f6a479bfabce60d2998b043625c0710ba8509b2dfc5efa50f",
+  "audit_csv": "/content/gdrive/MyDrive/Colab Notebooks/CPET/results/explanations/regnet_x_400mf/baseline_explainer_audit.csv",
+  "audit_csv_sha256": "0797dffec98f6cb08623894f5343723fa81270cbbddf6fa7f1fb6845f5364370",
+  "backbone": "regnet_x_400mf",
+  "classifier_artifact_chain_sha256": "0637b2db034e54e1fdbdae28351f517029d3826192216b62f030622c47b39603",
+  "classifier_manifest_path": "/content/gdrive/MyDrive/Colab Notebooks/CPET/runs/training/classifiers/regnet_x_400mf/latest_classifier_manifest.json",
+  "classifier_manifest_sha256": "48bda3d0061fdb8346a030eef5891213c7cb56da373be8e3cd5674400b77c9e5",
+  "cohort_path": "/content/gdrive/MyDrive/Colab Notebooks/CPET/results/explanations/regnet_x_400mf/explanation_cohort.parquet",
+  "cohort_rows": 1920,
+  "cohort_sha256": "907fe1953b59e1a6ee4ad722f963f2d7700800e54ee450a58283a10685930e40",
+  "completed_artifacts": 90,
+  "completed_utc": "2026-09-11T18:40:33.795033+00:00",
+  "config_path": "/content/gdrive/MyDrive/Colab Notebooks/CPET/configs/baseline_explainers_regnet_x_400mf_v1.1.0.json",
+  "config_sha256": "066bf60e04424592aec1c2485dbe5f407ba9ff8342afe8211cdba13918cfee8f",
+  "dataset_roles": {
+    "isic2016": "masked_replication",
+    "pad_ufes20": "external_patient_subgroup",
+    "siim_acr": "primary"
+  },
+  "datasets_for_xai": [
+    "siim_acr",
+    "isic2016",
+    "pad_ufes20"
+  ],
+  "elapsed_seconds": 4132.0015251636505,
+  "expected_artifacts": 90,
+  "explainers": [
+    "gradcam",
+    "layercam",
+    "integrated_gradients",
+    "lrp",
+    "rise",
+    "extremal_perturbation"
+  ],
+  "fold_performance": {
+    "isic2016": {
+      "mean_auroc": 0.8181435739912299,
+      "min_fold_auroc": 0.7508169934640523
+    },
+    "pad_ufes20": {
+      "mean_auroc": 0.8925196509875233,
+      "min_fold_auroc": 0.8545275909934921
+    },
+    "siim_acr": {
+      "mean_auroc": 0.9088010391599548,
+      "min_fold_auroc": 0.9020318090824546
+    }
+  },
+  "generated_this_run": 90,
+  "hardware": {
+    "device": "Tesla T4",
+    "gpu_required": true
+  },
+  "io_strategy": "03R cache reuse + 8-thread atomic staging + one in-RAM preprocess per fold",
+  "next_notebook": "06R_transport_refinement_regnet_x_400mf.py",
+  "notebook_id": "04R_baseline_explainers_regnet_x_400mf",
+  "protocol_version": "1.1.0",
+  "resumed_this_run": 0,
+  "status": "PASS"
+}

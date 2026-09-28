@@ -1,0 +1,11 @@
+{
+  "base_seed": 20260906,
+  "confirmatory_datasets": ["siim_acr", "isic2016", "pad_ufes20"],
+  "development_only_datasets": ["bus_uclm"],
+  "grouped_outer_folds": 5,
+  "method_name": "TransXAI",
+  "num_workers": 0,
+  "primary_unit": "donor",
+  "protocol_version": "1.1.0",
+  "test_data_used_for_selection": false
+}

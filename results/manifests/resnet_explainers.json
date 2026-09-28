@@ -1,0 +1,64 @@
+{
+  "artifact_chain_sha256": "03eca99541b21b05cd405b51b361913f5ce2cf53685b2426f97dbfacfa0cdfcd",
+  "audit_csv": "/content/gdrive/MyDrive/Colab Notebooks/CPET/results/explanations/resnet18/baseline_explainer_audit.csv",
+  "audit_csv_sha256": "23f2c7a44ac7a62d425d1da1cf5dbc966fa4ad4d5ce12849e311d3c42e69fde5",
+  "bus_confirmatory_prohibited": true,
+  "bus_uclm_policy": "EXPLORATORY_ONLY",
+  "cohort_path": "/content/gdrive/MyDrive/Colab Notebooks/CPET/results/explanations/resnet18/explanation_cohort.parquet",
+  "cohort_rows": 2049,
+  "cohort_sha256": "ca6270ac08825d19f032b798b0b4ad91d4118aeef7475676a2ba6d4b0fbe0a1a",
+  "completed_artifacts": 120,
+  "completed_utc": "2026-09-08T10:31:27.365471+00:00",
+  "config_path": "/content/gdrive/MyDrive/Colab Notebooks/CPET/configs/baseline_explainers_v1.1.0.json",
+  "config_sha256": "164ccacb3ccdbd1d4111f5c8f517dedbe79733663ca573f129ff7ec417245460",
+  "dataset_roles": {
+    "bus_uclm": "development_smoke",
+    "isic2016": "masked_replication",
+    "pad_ufes20": "external_patient_subgroup",
+    "siim_acr": "primary"
+  },
+  "datasets_for_xai": [
+    "bus_uclm",
+    "siim_acr",
+    "isic2016",
+    "pad_ufes20"
+  ],
+  "elapsed_seconds": 5548.47461104393,
+  "expected_artifacts": 120,
+  "explainers": [
+    "gradcam",
+    "layercam",
+    "integrated_gradients",
+    "lrp",
+    "rise",
+    "extremal_perturbation"
+  ],
+  "fold_performance": {
+    "bus_uclm": {
+      "mean_auroc": 0.6873735670472503,
+      "min_fold_auroc": 0.542319749216301
+    },
+    "isic2016": {
+      "mean_auroc": 0.7885085756557162,
+      "min_fold_auroc": 0.7407407407407407
+    },
+    "pad_ufes20": {
+      "mean_auroc": 0.8994871030387245,
+      "min_fold_auroc": 0.8765571199365434
+    },
+    "siim_acr": {
+      "mean_auroc": 0.9078880179724056,
+      "min_fold_auroc": 0.9016624349504785
+    }
+  },
+  "generated_this_run": 120,
+  "hardware": {
+    "device": "Tesla T4",
+    "gpu_required": true
+  },
+  "next_notebook": "05_train_learned_explainers_and_transxai.py",
+  "notebook_id": "04_baseline_explainers",
+  "protocol_version": "1.1.0",
+  "resumed_this_run": 0,
+  "status": "PASS"
+}

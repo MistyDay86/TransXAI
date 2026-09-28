@@ -1,0 +1,45 @@
+{
+  "base_explainers": [
+    "gradcam",
+    "layercam",
+    "integrated_gradients",
+    "lrp",
+    "rise",
+    "extremal_perturbation"
+  ],
+  "confirmatory_datasets": [
+    "siim_acr",
+    "isic2016",
+    "pad_ufes20"
+  ],
+  "constraints": {
+    "clinical_masks_used": false,
+    "exact_k": true,
+    "ground_truth_labels_used": false,
+    "local_effect_relative_tolerance": 0.1,
+    "max_swap_fraction": 0.25,
+    "preserve_local_effect_sign": true
+  },
+  "implementation": "1.0.1",
+  "name": "CPET explainer-agnostic exact-budget transport refinement",
+  "objective": {
+    "cvar_alpha": 0.8,
+    "cvar_weight": 0.35,
+    "mean_weight": 1.0,
+    "pair_loss": "1-exp(-abs(delta_recipient-delta_donor)/(abs(delta_donor)+epsilon))",
+    "tv_weight": 0.002
+  },
+  "operator": "exact-cardinality projected coordinate swap with validation identity fallback",
+  "parent_protocol": "1.1.0",
+  "primary_budget": 0.1,
+  "primary_recipient_k": 10,
+  "seed": 20260906,
+  "selection": {
+    "accept_margin": 0.002,
+    "fallback": "identity/base explanation",
+    "query_Q": "outer-test OOF patients",
+    "support_A": "outer-train patients",
+    "validation_B": "outer-validation patients"
+  },
+  "short_name": "T-CPT"
+}

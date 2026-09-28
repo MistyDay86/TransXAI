@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "TransXAI: Cross-Patient Explanation Transportability in Medical Imaging"
+type: software
+version: 1.0.0
+date-released: 2026-09-29
+authors:
+  - family-names: Metta
+    given-names: Carlo
+    email: carlo.metta@isti.cnr.it
+repository-code: "https://github.com/CuriosAI/TransXAI"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Cross-Patient Explanation Transportability in Medical Imaging"
+  authors:
+    - family-names: Metta
+      given-names: Carlo
+  year: 2026
